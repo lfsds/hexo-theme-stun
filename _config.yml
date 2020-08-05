@@ -52,8 +52,8 @@ sougou_site_verification:
 menu:
   home: / || fas fa-home
   archives: /archives/ || fas fa-folder-open
-  # categories: /categories/ || fas fa-layer-group
-  # tags: /tags/ || fas fa-tags
+  categories: /categories/ || fas fa-layer-group
+  tags: /tags/ || fas fa-tags
   # You can add a secondary menu like follow.
   # xxx1: javascript:; || fa(s|r|l|d|b) fa-xxx
 
@@ -138,11 +138,11 @@ header:
   height: 80%
   # Background image of site header.
   bg_image:
-    enable: false
+    enable: true
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url:
+    url: /images/01.webp
   # Mask effect of the background image.
   mask:
     enable: false
@@ -164,11 +164,11 @@ header:
 body:
   # Background image of site body.
   bg_image:
-    enable: false
+    enable: true
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url:
+    url: 
     # Whether to fixed the background image.
     fixed: true
     # Whether to repeat the image as much as possible to cover the entire area.
@@ -273,7 +273,7 @@ back2top:
 sidebar:
   enable: true
   # Optional values: left | right
-  position: right
+  position: left
   # The distance from the top of the page when the sidebar is fixed (Only `px` unit is supported)
   offsetTop: 20px
   # Whether to show horizon line.
@@ -360,7 +360,7 @@ reading_progress:
 codeblock:
   # The style of code block.
   # Optional values: default | simple | carbon
-  style: default
+  style: carbon
   # The theme of code highlight.
   # Optional values: light | dark | ocean
   highlight: light
