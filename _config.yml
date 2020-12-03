@@ -164,11 +164,11 @@ header:
 body:
   # Background image of site body.
   bg_image:
-    enable: true
+    enable: false
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url: 
+    url:
     # Whether to fixed the background image.
     fixed: true
     # Whether to repeat the image as much as possible to cover the entire area.
@@ -273,7 +273,7 @@ back2top:
 sidebar:
   enable: true
   # Optional values: left | right
-  position: left
+  position: right
   # The distance from the top of the page when the sidebar is fixed (Only `px` unit is supported)
   offsetTop: 20px
   # Whether to show horizon line.
@@ -560,6 +560,27 @@ utterances:
   # ! -------------------------------------------------------------------------------
   script_url: https://utteranc.es/client.js
 
+# Facebook Comments
+# See: https://developers.facebook.com/docs/plugins/comments
+fbcomments:
+  enable: false
+  # The ID of your own Facebook App.
+  appId:
+  # See: https://developers.facebook.com/docs/internationalization#locales
+  # Example: en_US | zh_CN | zh_HK ... and so on. For detail, see: ☝
+  lang: en_US
+  # Number of comments displayed by default.
+  numPosts: 10
+  # See: https://developers.facebook.com/docs/plugins/comments#sorting
+  # Optional values: social | reverse_time | time
+  order_by: reverse_time
+  # Optional values: true | false
+  lazy: true
+  # Whether to optimize the display on the mobile.
+  # Optional values: true | false
+  mobile: true
+  width: 100%
+
 # ---------------------------------------------------------------
 # Statistics and Analytics config
 # ---------------------------------------------------------------
@@ -616,6 +637,19 @@ algolia_search:
 local_search:
   enable: false
 
+# Auxiliary search buttons
+# ! -----------------------------------------------------------------------------------------
+# ! This feature can only be enabled if either `algolia_search` or `local_search` is enabled.
+# ! -----------------------------------------------------------------------------------------
+assist_search:
+  enable: false
+  # Show the Google Search button. Use `www.google.com` to search for what you type.
+  google: true
+  # Show the Bing Search button. Use `www.bing.com` to search for what you type.
+  bing: true
+  # Show the Baidu Search button. Use `www.baidu.com` to search for what you type.
+  baidu: true
+
 # ---------------------------------------------------------------
 # Background config
 # ---------------------------------------------------------------
@@ -655,7 +689,7 @@ math:
   per_page: false
   # ! -------------------------------------------------------------------------------
   # ! Please see the documentation before using. See:
-  # ! https://liuyib.github.io/hexo-theme-stun/zh-CN/advanced/third-part.html#mathjax
+  # ! https://theme-stun.github.io/docs/zh-CN/advanced/third-part.html#mathjax
   # ! -------------------------------------------------------------------------------
   # Optional values: mathjax | katex
   engine: katex
@@ -838,6 +872,8 @@ icon:
   notetag_info: fas fa-info-circle
   notetag_warning: fas fa-exclamation-circle
   notetag_danger: fas fa-minus-circle
+  google: fab fa-google
+  # bing: fab fa-bing # not exist
 
 # Set a CDN address for the vendor you want to customize.
 # ! -------------------------------------------------------------------
